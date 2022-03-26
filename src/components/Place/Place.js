@@ -1,5 +1,7 @@
 import React from 'react';
 import './Place.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping} from '@fortawesome/free-solid-svg-icons';
 
 const Place = (props) => {
     // console.log(props.data);
@@ -15,7 +17,7 @@ const Place = (props) => {
             <h6>Distance from Sun: {distance}</h6>
             <h4>Orbital Period: {OrbitalPeriod}</h4>
             <h4>Travel Cost : <span className='display-5 font-weight-bold'>${tourCost}</span></h4>
-            <button onClick={()=>addToListHandle(props.data)} className='btn btn-primary my-3'>Add to List</button>
+            <button onClick={()=>addToListHandle(props.data)} className='btn btn-primary my-3'>Add to List <FontAwesomeIcon icon={faCartShopping} /></button>
         </div>
     );
 };

@@ -3,24 +3,21 @@ import Header from './components/Header/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Places from './components/Places/Places';
 import Cart from './components/Cart/Cart';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 function App() {
   const [count , setCount] = useState([]);
   
   const addToListHandle = (data) =>{
     let infoContainer =[];
-    infoContainer =[...count , data];
-    setCount(infoContainer);
-    if(infoContainer.length >4){
-      alert('More than 4');
-      return;
+    if(!count.includes(data)){
+      infoContainer =[...count , data];
+      setCount(infoContainer);
     }
-    // console.log(data.id);
-    
-    console.log(infoContainer);
+    else{
+      alert('ALready Selected!')
+    }
   }
-  
   return (
     <div className="App">
         <Header></Header>

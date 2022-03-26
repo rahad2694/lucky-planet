@@ -2,7 +2,7 @@ import React from 'react';
 import './CartItems.css'
 
 const CartItems = (props) => {
-    const {title, id, tourCost } = props.ietm;
+    const {title, id} = props.ietm;
     let imgSource = `../../images/${id}-${title}.jpg`;
     return (
         <div className='border p-2'>
