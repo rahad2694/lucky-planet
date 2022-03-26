@@ -16,7 +16,7 @@ const LaunchModal = ({selectedItemName, handleLuckyOne, selectedItemPrice}) => {
     
           <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
-              <Modal.Title>Your Luck Destination is:</Modal.Title>
+              <Modal.Title>Your Lucky Destination is:</Modal.Title>
             </Modal.Header>
             <Modal.Body>
               <h1 className='text-center'>{selectedItemName}</h1>
@@ -24,7 +24,7 @@ const LaunchModal = ({selectedItemName, handleLuckyOne, selectedItemPrice}) => {
             </Modal.Body>
             <Modal.Footer>
               <Button variant="primary" onClick={handleClose}>
-                Book Now
+                Book Flight Now
               </Button>
               <Button variant="secondary" onClick={handleClose}>
                 Close

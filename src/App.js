@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Places from './components/Places/Places';
 import Cart from './components/Cart/Cart';
 import { useState } from 'react';
+import QaModal from './components/QaModal/QaModal';
 
 function App() {
   const [count , setCount] = useState([]);
@@ -36,6 +37,9 @@ function App() {
           <div className='col-md-3 col-12 col-xs-12 col-sm-3 col-lg-3 col-xl-3'>
             <Cart emptyCart={emptyCart} infoContainer={count}></Cart>
           </div>
+        </div>
+        <div className='mt-3 mb-4'>
+          <QaModal></QaModal>
         </div>
     </div>
   );

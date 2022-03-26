@@ -4,7 +4,6 @@ import LaunchModal from '../LaunchModal/LaunchModal';
 import './Cart.css';
 
 const Cart = ({infoContainer,emptyCart}) => {
-    // console.log(infoContainer);
     const [selectedNum , setSelectedNum] = useState(0);
     const handleLuckyOne = ()=>{
         let number = Number((Math.random()*(infoContainer.length)).toFixed(0));
