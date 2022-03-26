@@ -14,7 +14,7 @@ const Place = (props) => {
             <img className='image w-50 my-3' src={imgSource} alt="Destination" />
             <h6>Distance from Sun: {distance}</h6>
             <h4>Orbital Period: {OrbitalPeriod}</h4>
-            <h2>Travel Cost : ${tourCost}</h2>
+            <h4>Travel Cost : <span className='display-5 font-weight-bold'>${tourCost}</span></h4>
             <button onClick={()=>addToListHandle(props.data)} className='btn btn-primary my-3'>Add to List</button>
         </div>
     );

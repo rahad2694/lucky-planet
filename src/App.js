@@ -6,16 +6,21 @@ import Cart from './components/Cart/Cart';
 import { useEffect, useState } from 'react';
 
 function App() {
-  const [infoContainer , setInfoContainer] = useState([]);
-  let oldInfoContainer = [];
+  const [count , setCount] = useState([]);
+  
   const addToListHandle = (data) =>{
-    console.log('I am clicked!',data);
-    oldInfoContainer.push(data);
-    setInfoContainer(data);
-    console.log(oldInfoContainer); 
-    console.log(infoContainer); 
+    let infoContainer =[];
+    infoContainer =[...count , data];
+    setCount(infoContainer);
+    if(infoContainer.length >4){
+      alert('More than 4');
+      return;
+    }
+    // console.log(data.id);
+    
+    console.log(infoContainer);
   }
-  // console.log(infoContainer);
+  
   return (
     <div className="App">
         <Header></Header>
@@ -24,7 +29,7 @@ function App() {
             <Places addToListHandle={addToListHandle}></Places>
           </div>
           <div className='col-md-3 col-12 col-xs-12 col-sm-3 col-lg-3 col-xl-3'>
-            <Cart></Cart>
+            <Cart infoContainer={count}></Cart>
           </div>
         </div>
     </div>
