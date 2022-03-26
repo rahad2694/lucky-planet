@@ -1,9 +1,10 @@
 import React from 'react';
+import './Header.css'
 
 
 const Header = () => {
     return (
-        <nav className='bg-dark py-3'>
+        <nav className='py-3 mb-2 nav-style sticky-top'>
             <h1 className='text-white'>Interplanetary spaceflight</h1>
             <small className='text-white'>Expedite with Convenience</small>
         </nav>
