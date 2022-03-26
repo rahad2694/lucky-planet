@@ -1,14 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 
-const LaunchModal = ({selectedItemName, selectedItem, handleLuckyOne}) => {
-    console.log(selectedItem);
-    // console.log(selectedItem);
-    // if(selectedItem.length >0 ){
-    //     const {id, title} = selectedItem;
-    //     const imgSource = `../../images/${id}-${title}.jpg`;
-    // }
-    
+const LaunchModal = ({selectedItemName, handleLuckyOne, selectedItemPrice}) => {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -23,17 +16,18 @@ const LaunchModal = ({selectedItemName, selectedItem, handleLuckyOne}) => {
     
           <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
-              <Modal.Title>{selectedItemName}</Modal.Title>
+              <Modal.Title>Your Luck Destination is:</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                
+              <h1 className='text-center'>{selectedItemName}</h1>
+              <h5 className='text-center py-3 my-3'>Tour Cost: <span className='display-6 font-weight-bold'>${selectedItemPrice}</span> Only!</h5>
             </Modal.Body>
             <Modal.Footer>
+              <Button variant="primary" onClick={handleClose}>
+                Book Now
+              </Button>
               <Button variant="secondary" onClick={handleClose}>
                 Close
-              </Button>
-              <Button variant="primary" onClick={handleClose}>
-                Save Changes
               </Button>
             </Modal.Footer>
           </Modal>
