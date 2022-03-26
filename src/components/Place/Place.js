@@ -4,6 +4,8 @@ import './Place.css';
 const Place = (props) => {
     // console.log(props.data);
     const {id, title, distance,OrbitalPeriod,tourCost } = props.data;
+    const {addToListHandle} = props;
+    // console.log(addToListHandle);
     let imgSource = `../../images/${id}-${title}.jpg`;
     // console.log(imgSource);
     return (
@@ -13,7 +15,7 @@ const Place = (props) => {
             <h6>Distance from Sun: {distance}</h6>
             <h4>Orbital Period: {OrbitalPeriod}</h4>
             <h2>Travel Cost : ${tourCost}</h2>
-            <button className='btn btn-primary my-3'>Add to List</button>
+            <button onClick={()=>addToListHandle(props.data)} className='btn btn-primary my-3'>Add to List</button>
         </div>
     );
 };

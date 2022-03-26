@@ -4,7 +4,11 @@ const Cart = () => {
     return (
         <div className= 'border'>
             <h1>Cart</h1>
-            <p>item name</p>
+            <div className='d-flex justify-content-evenly'>
+                <img src="" alt="" />
+                <h3>item name</h3>
+                <button className='btn btn-danger'>X</button>
+            </div>
         </div>
     );
 };
