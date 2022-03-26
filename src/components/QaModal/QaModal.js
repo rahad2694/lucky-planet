@@ -28,7 +28,7 @@ const QaModal = () => {
                 <Accordion.Item eventKey="1">
                 <Accordion.Header>How useState Works?</Accordion.Header>
                 <Accordion.Body>
-                The useState is a React Hook that helps us to change the state in the DOM. Hooks are special functions that let us use the react features. This useState is used in function components and it initially takes a parameter as a default value od state and returns an array containing the current value of state and setState function to update the state.These hooks help us to get rid of writing complex classes. In the function components, we have no access to "this.state", so this useState hook helps us from this problem and lets us access the value of state as well as set the new value of state by the setState function.
+                    The useState is a React Hook that helps us to change the state in the DOM. Hooks are special functions that let us use the react features. This useState is used in function components and it initially takes a parameter as a default value of the state and returns an array containing the current value of the state and setState function to update the state.These hooks help us to get rid of writing complex classes. In the function components, we have no access to "this.state", so this useState hook helps us from this problem and lets us access the value of state as well as set the new value of state by the setState function.
                 </Accordion.Body>
                 </Accordion.Item>
             </Accordion>

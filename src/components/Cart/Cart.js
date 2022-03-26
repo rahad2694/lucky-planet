@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import CartItems from '../CartItems/CartItems';
 import LaunchModal from '../LaunchModal/LaunchModal';
-import './Cart.css';
 
 const Cart = ({infoContainer,emptyCart}) => {
     const [selectedNum , setSelectedNum] = useState(0);
@@ -21,16 +20,13 @@ const Cart = ({infoContainer,emptyCart}) => {
     else{
         selectedItemName='';
     }
-    
-    
     return (
-        <div className= 'border cart-container'>
+        <div className= 'border'>
             <h1 className='my-3'>Cart</h1>
             {
                infoContainer.map(ietm =><CartItems ietm={ietm} key={ietm.id} ></CartItems>)
             }
             <div className='border p-2'>
-                {/* <button onClick={handleLuckyOne} className='btn btn-success my-2'>Lucky-One</button> */}
                 <div>
                     <LaunchModal handleLuckyOne={handleLuckyOne} selectedItemName={selectedItemName} selectedItemPrice={selectedItemPrice}></LaunchModal>
                 </div>

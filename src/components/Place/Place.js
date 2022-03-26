@@ -4,12 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping} from '@fortawesome/free-solid-svg-icons';
 
 const Place = (props) => {
-    // console.log(props.data);
     const {id, title, distance,OrbitalPeriod,tourCost } = props.data;
     const {addToListHandle} = props;
-    // console.log(addToListHandle);
     let imgSource = `../../images/${id}-${title}.jpg`;
-    // console.log(imgSource);
     return (
         <div className='text-white individual-place col-12 col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4'>
             <h2>Place : {title}</h2>
