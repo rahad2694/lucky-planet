@@ -1,6 +1,6 @@
 # Interplanetary spaceflight React App
 
-Live Site link: [Create React App](https://rahad-interplanetary-spaceflight.netlify.app/).
+Live Site link: [Interplanetary spaceflight](https://rahad-interplanetary-spaceflight.netlify.app/).
 
 ## Project Description
 
