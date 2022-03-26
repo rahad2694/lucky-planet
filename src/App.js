@@ -7,17 +7,25 @@ import { useState } from 'react';
 
 function App() {
   const [count , setCount] = useState([]);
-  
+  const emptyCart =()=>{
+    setCount([]);
+  }
   const addToListHandle = (data) =>{
     let infoContainer =[];
     if(!count.includes(data)){
       infoContainer =[...count , data];
-      setCount(infoContainer);
+      if(infoContainer.length <=4){
+        setCount(infoContainer);
+      }
+      else{
+        alert('More than 4 is not Allowed')
+      }
     }
     else{
       alert('ALready Selected!')
     }
   }
+  
   return (
     <div className="App">
         <Header></Header>
@@ -26,11 +34,12 @@ function App() {
             <Places addToListHandle={addToListHandle}></Places>
           </div>
           <div className='col-md-3 col-12 col-xs-12 col-sm-3 col-lg-3 col-xl-3'>
-            <Cart infoContainer={count}></Cart>
+            <Cart emptyCart={emptyCart} infoContainer={count}></Cart>
           </div>
         </div>
     </div>
   );
 }
+
 
 export default App;

@@ -3,8 +3,8 @@ import CartItems from '../CartItems/CartItems';
 import LaunchModal from '../LaunchModal/LaunchModal';
 import './Cart.css';
 
-const Cart = ({infoContainer}) => {
-    console.log(infoContainer);
+const Cart = ({infoContainer,emptyCart}) => {
+    // console.log(emptyCart);
     const [selectedNum , setSelectedNum] = useState(0);
     const handleLuckyOne = ()=>{
         let number = Number((Math.random()*(infoContainer.length)).toFixed(0));
@@ -32,7 +32,7 @@ const Cart = ({infoContainer}) => {
             <div className='border d-flex justify-content-between p-2'>
                 {/* <button onClick={handleLuckyOne} className='btn btn-success my-2'>Lucky-One</button> */}
                 <LaunchModal handleLuckyOne={handleLuckyOne} selectedItem={selectedItem} selectedItemName={selectedItemName}></LaunchModal>
-                <button className='btn btn-danger py-2 my-2 px-3'>Reset</button>
+                <button onClick={emptyCart} className='btn btn-danger py-2 my-2 px-3'>Reset</button>
             </div>
         </div>
     );
