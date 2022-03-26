@@ -29,10 +29,14 @@ const Cart = ({infoContainer,emptyCart}) => {
             {
                infoContainer.map(ietm =><CartItems ietm={ietm} key={ietm.id} ></CartItems>)
             }
-            <div className='border d-flex justify-content-between p-2'>
+            <div className='border p-2'>
                 {/* <button onClick={handleLuckyOne} className='btn btn-success my-2'>Lucky-One</button> */}
-                <LaunchModal handleLuckyOne={handleLuckyOne} selectedItem={selectedItem} selectedItemName={selectedItemName}></LaunchModal>
-                <button onClick={emptyCart} className='btn btn-danger py-2 my-2 px-3'>Reset</button>
+                <div>
+                    <LaunchModal handleLuckyOne={handleLuckyOne} selectedItem={selectedItem} selectedItemName={selectedItemName}></LaunchModal>
+                </div>
+                <div>
+                    <button onClick={emptyCart} className='btn btn-danger py-2 my-2 px-3'>Reset</button>
+                </div>
             </div>
         </div>
     );
