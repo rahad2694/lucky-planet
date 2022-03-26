@@ -1,10 +1,11 @@
 import React from 'react';
 import CartItems from '../CartItems/CartItems';
+import './Cart.css';
 
 const Cart = ({infoContainer}) => {
     // console.log(infoContainer);
     return (
-        <div className= 'border'>
+        <div className= 'border cart-container'>
             <h1 className='my-3'>Cart</h1>
             {
                infoContainer.map(ietm =><CartItems ietm={ietm} key={ietm.id} ></CartItems>)

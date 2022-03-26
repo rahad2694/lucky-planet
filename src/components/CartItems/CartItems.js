@@ -8,7 +8,7 @@ const CartItems = (props) => {
         <div className='border p-2'>
             <div className='d-flex justify-content-between'>
                 <img className='image-in-cart' src={imgSource} alt="" />
-                <h3>{title}</h3>
+                <h5>{title}</h5>
                 <button className='btn btn-danger'>X</button>
             </div>
         </div>
