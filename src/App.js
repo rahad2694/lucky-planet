@@ -34,7 +34,7 @@ function App() {
           <div className='col-md-9 col-12 col-xs-12 col-sm-9 col-lg-9 col-xl-9'>
             <Places addToListHandle={addToListHandle}></Places>
           </div>
-          <div className='col-md-3 col-12 col-xs-12 col-sm-3 col-lg-3 col-xl-3'>
+          <div className='col-md-3 col-12 col-xs-12 col-sm-3 col-lg-3 col-xl-3 cart-container-box'>
             <Cart emptyCart={emptyCart} infoContainer={count}></Cart>
           </div>
         </div>
